@@ -24,12 +24,28 @@ void Out(int (*ar)[COLS])
 	}
 }
 
-void doub(int(*ar)[COLS], int row)
+void doub(int(*ar)[COLS])
 {
 	int r, c;
-	for (r = 0; r < row; r++)
+	for (r = 0; r < ROWS; r++)
 	{
 		for (c = 0; c < COLS; c++)
 			ar[r][c] *= 2;
 	}
+}
+
+void FillArr(int(*ar)[COLS])
+{
+	int r, c;
+	for (r = 0; r < ROWS; r++)
+		for (c = 0; c < COLS; c++)
+			ar[r][c] = c;
+}
+
+void ArraySum(int(*first)[COLS], int(*second)[COLS], int(*out)[COLS])
+{
+	int i, j;
+	for (i = 0; i < ROWS; i++)
+		for (j = 0; j < COLS; j++)
+			out[i][j] = first[i][j] + second[i][j];
 }

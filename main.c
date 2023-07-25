@@ -4,16 +4,25 @@
 
 int main(void)
 {
-	int arr[ROWS][COLS];
-	int r, c;
-	for (r = 0; r < ROWS; r++)
-		for (c = 0; c < COLS; c++)
-			arr[r][c] = c;
+	int arr1[ROWS][COLS], arr2[ROWS][COLS], sum[ROWS][COLS];
 
+	FillArr(arr1);
+	FillArr(arr2);
+	Out(arr1);
+	printf("\n");
+	Out(arr2);
+	printf("\n");
+	ArraySum(arr1, arr2, sum);
+	Out(sum);
+
+
+	/*
 	Out(arr);
 	doub(arr, ROWS);
 	printf("\n");
 	Out(arr);
+	*/
+
 
 
 	/*
