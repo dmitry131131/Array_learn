@@ -12,8 +12,12 @@ void Reverse(int *ar, int s);    // Array reverse func
  
 void Out(int (*ar)[COLS]);       // Twin array output func
 
-void doub(int *ar[COLS]);    // Doubling array func
+void doub(int (*ar)[COLS]);    // Doubling array func
 
 void FillArr(int(*ar)[COLS]);  // Fill Array 
 
 void ArraySum(int (*first)[COLS], int (*second)[COLS], int (*out)[COLS]); // Summ all array elements 
+
+void DrawMenu(void);  // Menu drawing func
+
+void ScipInput(void); // Scip trash simbols func

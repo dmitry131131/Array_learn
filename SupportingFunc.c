@@ -49,3 +49,18 @@ void ArraySum(int(*first)[COLS], int(*second)[COLS], int(*out)[COLS])
 		for (j = 0; j < COLS; j++)
 			out[i][j] = first[i][j] + second[i][j];
 }
+
+void DrawMenu(void)
+{
+	printf("Please select mode\n");
+	printf("f: Fill array  d: Double array\n");
+	printf("o: Output array  s: summ arrays\n");
+	printf("e: Exit\n");
+}
+
+void ScipInput(void)
+{
+	char ch;
+	while ((ch = getchar()) != '\n')
+		;
+}
