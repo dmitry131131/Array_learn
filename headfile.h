@@ -21,3 +21,5 @@ void ArraySum(int (*first)[COLS], int (*second)[COLS], int (*out)[COLS]); // Sum
 void DrawMenu(void);  // Menu drawing func
 
 void ScipInput(void); // Scip trash simbols func
+
+void ChangeVar(int *, int *); // Change variable

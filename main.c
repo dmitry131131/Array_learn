@@ -5,7 +5,7 @@
 int main(void)
 {
 	int arr1[ROWS][COLS], arr2[ROWS][COLS], sum[ROWS][COLS];
-	int num;
+	int num, num1;
 	char ch;
 	_Bool flag = 1;
 
@@ -111,6 +111,21 @@ int main(void)
 			else
 				printf("Array with number: %d not found\n", num);
 			break;
+		}
+
+		case 'c':
+		{
+			printf("Enter nubmers of variables:\n");
+			while (scanf("%d %d", &num, &num1) != 2)
+			{
+				printf("Numbers must be digital\n");
+				printf("Enter nubmers of variables:\n");
+				ScipInput();
+			}
+			ScipInput();
+			printf("First: %d Second: %d\n", num, num1);
+			ChangeVar(&num, &num1);
+			printf("First: %d Second: %d\n", num, num1);
 		}
 
 		default:

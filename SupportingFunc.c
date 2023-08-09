@@ -55,7 +55,7 @@ void DrawMenu(void)
 	printf("Please select mode\n");
 	printf("f: Fill array  d: Double array\n");
 	printf("o: Output array  s: summ arrays\n");
-	printf("e: Exit\n");
+	printf("c: Change variable  e: Exit\n");
 }
 
 void ScipInput(void)
@@ -63,4 +63,11 @@ void ScipInput(void)
 	char ch;
 	while ((ch = getchar()) != '\n')
 		;
+}
+
+void ChangeVar(int *a, int *b)
+{
+	int temp = *a;
+	*a = *b;
+	*b = temp;
 }
