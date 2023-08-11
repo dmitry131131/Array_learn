@@ -1,5 +1,6 @@
 /* Supporting functions file*/
 #include <stdio.h>
+#include <stdlib.h>
 #include "headfile.h"
 
 void Reverse(int *ar, int s)
@@ -55,7 +56,7 @@ void DrawMenu(void)
 	printf("Please select mode\n");
 	printf("f: Fill array  d: Double array\n");
 	printf("o: Output array  s: summ arrays\n");
-	printf("c: Change variable  e: Exit\n");
+	printf("c: Change variable  m: malloc()  e: Exit\n");
 }
 
 void ScipInput(void)
@@ -70,4 +71,41 @@ void ChangeVar(int *a, int *b)
 	int temp = *a;
 	*a = *b;
 	*b = temp;
+}
+
+void Enternwords(char **ar, int count)
+{
+	char temp[100];
+	int c;
+	printf("Enter %d words:\n", count);
+
+	for (int i = 0; i < count; i++)
+	{
+		if (scanf("%s", temp) == 1)
+		{
+			c = 0;
+			while (temp[c] != '\0')
+				c++;
+
+			ar[i] = (char*)malloc(c + 1);
+
+			for (int j = 0; j < c + 1; j++)
+			{
+					ar[i][j] = temp[j];
+			}
+		}
+
+		else
+		{
+			i = 0;
+			printf("Enter %d words:\n", count);
+		}
+	}
+	/* Output words and free memory */
+	for (int i = 0; i < count; i++)
+	{
+			puts(ar[i]);
+			free(ar[i]);
+	}
+	ScipInput();
 }

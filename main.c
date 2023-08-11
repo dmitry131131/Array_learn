@@ -1,5 +1,6 @@
 /* Programm to learn array features */
 #include <stdio.h>
+#include <stdlib.h>
 #include "headfile.h"
 
 int main(void)
@@ -126,6 +127,31 @@ int main(void)
 			printf("First: %d Second: %d\n", num, num1);
 			ChangeVar(&num, &num1);
 			printf("First: %d Second: %d\n", num, num1);
+			break;
+		}
+
+		case 'm':
+		{
+			int count;
+			printf("Enter count of words:\n");
+			while (scanf("%d", &count) != 1)
+			{
+				printf("Number must be digital\n");
+				printf("Enter count of words:\n");
+				ScipInput();
+			}
+			ScipInput();
+
+			char **pointers = (char**)malloc(count);
+
+			Enternwords(pointers, count);
+
+			break;
+		}
+		case 'p':
+		{
+			printf("%zd\n", sizeof(char));
+			break;
 		}
 
 		default:

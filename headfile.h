@@ -23,3 +23,5 @@ void DrawMenu(void);  // Menu drawing func
 void ScipInput(void); // Scip trash simbols func
 
 void ChangeVar(int *, int *); // Change variable
+
+void Enternwords(char **, int count);  // Enter n words and write them to array
