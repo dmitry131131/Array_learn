@@ -24,4 +24,6 @@ void ScipInput(void); // Scip trash simbols func
 
 void ChangeVar(int *, int *); // Change variable
 
-void Enternwords(char **, int count);  // Enter n words and write them to array
+char** Enternwords(int count);  // Enter n words and write them to array
+
+char* Enterword(); // Enter 1 word

@@ -142,17 +142,38 @@ int main(void)
 			}
 			ScipInput();
 
-			char **pointers = (char**)malloc(count);
+			char** pointers = Enternwords(count);
 
-			Enternwords(pointers, count);
+			for (int i = 0; i < count; i++)
+			{
+				puts(pointers[i]);
+				free(pointers[i]);
+			}
+			
 
+			/*
+			for (int i = 0; i < count; i++)
+			{
+				printf(*pointers[i]);
+			}
+			*/
+
+			
 			break;
 		}
+
 		case 'p':
 		{
-			printf("%zd\n", sizeof(char));
+			char* pt = Enterword();
+			
+			if (pt)
+			{
+				puts(pt);
+				free(pt);
+			}
 			break;
 		}
+		
 
 		default:
 			break;
